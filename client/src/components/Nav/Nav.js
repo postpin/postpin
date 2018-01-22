@@ -16,6 +16,9 @@ const Nav = () => (
         <Link to="/login" className="navbar-brand">
           Login
         </Link>
+        <Link to="/Metrics" className="navbar-brand">
+          Metrics
+        </Link>
         <Link to="/signup" className="navbar-brand">
           Sign Up
         </Link>
