@@ -32,12 +32,20 @@ const PostSchema = new Schema({
     type: Date,
     default: Date.now
   },
-
-  // This allows the Post object to create an association to the Metric object
-  metric: {
-    type: Schema.Types.ObjectId,
-    ref: "Metric"
+  likeTotal: {
+    type: Number,
+    required: null
   },
+  commentTotal: {
+    type: Number,
+    required: null
+  },
+  clickTotal: { //image URL
+    type: String,
+    default: null
+  },
+
+  // This allows the Post object to create an association to the Comment object
 
   comment: {
     type: Schema.Types.ObjectId,
