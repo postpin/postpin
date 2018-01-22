@@ -6,16 +6,16 @@ PostPin is an artistic social media app for creative and expressive outlet. Conc
 Start by installing front and backend dependencies. While in this directory, run the following commands:
 
 ```
-npm install
+yarn install
 cd client
-npm install
+yarn install
 cd ..
 ``
 
 After both installations complete, run the following command in your terminal:
 
 ```
-npm start
+yarn start
 ```
 
 That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
@@ -27,7 +27,7 @@ After confirming that you have an up to date git repository and a Heroku app cre
 1. Build the React app for production by running the following command:
 
 ```
-npm build
+yarn build
 ```
 
 2. Add and commit all changes to git
