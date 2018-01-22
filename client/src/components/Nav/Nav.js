@@ -66,6 +66,9 @@ const Nav = props =>
         <li className={window.location.pathname === "/signout" ? "active" : ""}>
           <Link to="/signout">Signout</Link>
         </li>
+        <li className={window.location.pathname === "/search" ? "active" : ""}>
+          <Link to="/search">Search</Link>
+        </li>
       </ul>
     </div>
   </nav>;
