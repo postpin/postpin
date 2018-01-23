@@ -4,11 +4,11 @@
 
 // const Nav = () => (
 //   <nav className="navbar navbar-inverse sticky-top">
-//     <div className="container-fluid">
+//     <div className="container-fluid Navigation" id="navigation">
 //       <div className="navbar-header">
 
 //         <Link to="/discover" className="navbar-brand">
-//            Discover
+//           Discover
 //         </Link>
 
 //         <Link to="/post" className="navbar-brand">
@@ -36,21 +36,25 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import "../../App.css";
+import mainLogo from "./icon-logo.png";
+import UserProfile from "./../UserProfile";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Nav = props =>
-  <nav className="navbar navbar-default">
-    <div className="container-fluid">
-      <div className="navbar-header">
+  <nav>
+    <div className="container-fluid Navigation" id="navigation">  
+      <ul>
+        <li> 
+          <img src={mainLogo} />
+        </li>
+
+        <li>  
         <Link className="navbar-brand" to="/">
           PostPin
         </Link>
-      </div>
-      <ul className="nav navbar-nav">
-        <li
-          className={
-            window.location.pathname === "/" || window.location.pathname === "/discover" ? "active" : ""}>
+        </li>
+        <li>
           <Link to="/">Discover</Link>
         </li>
         <li
@@ -63,7 +67,11 @@ const Nav = props =>
         <li className={window.location.pathname === "/metrics" ? "active" : ""}>
           <Link to="/metrics">Metrics</Link>
         </li>
-        <li className={window.location.pathname === "/signout" ? "active" : ""}>
+
+        <li className="rightAdjust">
+          <UserProfile />
+        </li>
+        <li className="rightAdjust" className={window.location.pathname === "/signout" ? "active" : ""} id="signout">
           <Link to="/signout">Signout</Link>
         </li>
       </ul>
