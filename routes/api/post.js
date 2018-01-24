@@ -2,12 +2,12 @@ const router = require("express").Router();
 const postController = require("../../controllers/postController");
 
 // Matches with "/api/post"
-router.route("/newpost")
+router.route("/")
   .get(postController.findAll)
   .post(postController.create);
 
 // Matches with "/api/newpost/:id"
-router.route("/post/:id")
+router.route("/:id")
   .get(postController.findById)
   .put(postController.update)
   .delete(postController.remove);

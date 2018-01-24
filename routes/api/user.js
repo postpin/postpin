@@ -2,12 +2,12 @@ const router = require("express").Router();
 const userController = require("../../controllers/userController");
 
 // Matches with "/api/users"
-router.route("/newusers")
+router.route("/")
   .get(userController.findAll)
   .post(userController.create);
 
-// Matches with "/api/newuser/:id"
-router.route("/user/:id")
+// Matches with "/:id"
+router.route("/:id")
   .get(userController.findById)
   .put(userController.update)
   .delete(userController.remove);
