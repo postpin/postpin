@@ -46,7 +46,7 @@ const Nav = props =>
     <div className="container-fluid Navigation" id="navigation">  
       <ul>
         <li> 
-          <img src={mainLogo} />
+          <img src={mainLogo} alt="logo"/>
         </li>
 
         <li>  
@@ -71,7 +71,7 @@ const Nav = props =>
         <li className="rightAdjust">
           <UserProfile />
         </li>
-        <li className="rightAdjust" className={window.location.pathname === "/signout" ? "active" : ""} id="signout">
+        <li className={window.location.pathname === "/signout" ? "active" : ""}>
           <Link to="/signout">Signout</Link>
         </li>
       </ul>

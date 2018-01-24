@@ -10,7 +10,7 @@ import Signout from "./pages/Signout";
 import Signup from "./pages/Signup";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
-import UserProfile from "./components/UserProfile";
+
 
 const App = () =>
   <Router>

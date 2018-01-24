@@ -41,7 +41,7 @@ const UserSchema = new Schema({
   },
   profilePhoto: { //image URL
     type: String,
-    default: null
+    default: false
   },
   // This allows the User object to create an association to the Post object
   post: {
