@@ -5,12 +5,12 @@ const PostSchema = new Schema({
   title: {
     type: String,
     trim: true,
-    required: null
+    required: false
   },
   body: {
     type: String,
     trim: true,
-    required: null,
+    required: false,
     validate: [
       (input) => {
         return input.length <= 200;
@@ -20,7 +20,7 @@ const PostSchema = new Schema({
   },
   cardImage: { //image URL
     type: String,
-    default: null
+    default: false
   },
 
   isAnonymous: {
@@ -34,15 +34,15 @@ const PostSchema = new Schema({
   },
   likeTotal: {
     type: Number,
-    required: null
+    required: false
   },
   commentTotal: {
     type: Number,
-    required: null
+    required: false
   },
   clickTotal: { //image URL
     type: String,
-    default: null
+    default: false
   },
 
   // This allows the Post object to create an association to the Comment object

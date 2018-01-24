@@ -5,7 +5,7 @@ const CommentSchema = new Schema({
   //how to track date
   body: {
     type: String,
-    required: null
+    required: false
   },
   commentCreated: {
     type: Date,
