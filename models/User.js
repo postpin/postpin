@@ -35,14 +35,15 @@ const UserSchema = new Schema({
     unique: true,
     match: [/.+\@.+\..+/, "Please enter a valid e-mail address"]
   },
-  userCreated: {
-    type: Date,
-    default: Date.now
-  },
   profilePhoto: { //image URL
     type: String,
     default: false
   },
+  userCreated: {
+    type: Date,
+    default: Date.now
+  },
+
   // This allows the User object to create an association to the Post object
   post: {
     type: Schema.Types.ObjectId,
