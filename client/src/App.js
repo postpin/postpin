@@ -10,6 +10,7 @@ import Signout from "./pages/Signout";
 import Signup from "./pages/Signup";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+import Chart from './pages/Metrics'
 
 
 const App = () =>

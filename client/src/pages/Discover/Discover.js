@@ -8,7 +8,7 @@ class Discover extends Component {
 
       <div className="discover">
         <br />
-        <h1> Discover pace </h1>
+        <h1> Discover helloooo space </h1>
       </div>
     )
   }
