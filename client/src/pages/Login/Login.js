@@ -6,7 +6,8 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
-        <h1> Login Page </h1>
+        <h1> Login with Google </h1>
+        
       </div>
     )
   }
@@ -14,3 +15,7 @@ class Login extends Component {
 
 
 export default Login;
+
+
+
+
