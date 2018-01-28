@@ -1,5 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Axios from 'axios';
+
 
 import "./App.css";
 import Discover from "./pages/Discover";
@@ -10,6 +12,9 @@ import Signout from "./pages/Signout";
 import Signup from "./pages/Signup";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+
+import ImgList from './components/ImgList';
+import SearchForm from './components/SearchForm';
 
 
 const App = () =>
