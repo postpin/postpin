@@ -42,6 +42,8 @@ import UserProfile from "./../UserProfile";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Nav = props =>
+console.log(this);
+
   <nav>
     <div className="container-fluid Navigation" id="navigation">  
       <ul>
@@ -61,19 +63,19 @@ const Nav = props =>
           className={window.location.pathname === "/post" ? "active" : ""}>
           <Link to="/post">Post</Link>
         </li>
-        <li className={window.location.pathname === "/login" ? "active" : ""}>
-          <Link to="/login">Login</Link>
-        </li>
+
         <li className={window.location.pathname === "/metrics" ? "active" : ""}>
           <Link to="/metrics">Metrics</Link>
         </li>
+        
+        <li className={window.location.pathname === "/login" ? "active" : ""}>
+          {this.props.signedIn ? <Link to="/signout">Signout</Link> : <Link to="/login">Login</Link>}
+        </li>
 
         <li className="rightAdjust">
-          <UserProfile />
+          {this.pros.signedIn && <UserProfile />}
         </li>
-        <li className={window.location.pathname === "/signout" ? "active" : ""}>
-          <Link to="/signout">Signout</Link>
-        </li>
+
       </ul>
     </div>
   </nav>;

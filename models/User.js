@@ -37,18 +37,13 @@ const UserSchema = new Schema({
   },
   profilePhoto: { //image URL
     type: String,
-    default: false
+    default: "https://media.giphy.com/media/l0ExqCt2fIDQBK7MA/giphy.gif"
   },
   userCreated: {
     type: Date,
     default: Date.now
   },
 
-  // This allows the User object to create an association to the Post object
-  post: {
-    type: Schema.Types.ObjectId,
-    ref: "Post"
-  },
 
   comment: {
     type: Schema.Types.ObjectId,
