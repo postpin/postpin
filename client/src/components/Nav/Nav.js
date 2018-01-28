@@ -71,7 +71,7 @@ renderContent() {
 
 
 render() {
-  console.log('this.props of nav: ', this.props);
+  console.log('this.props of nav: ', this.props.signedIn);
   
   return (
     <div>

@@ -3,7 +3,7 @@ import axios from 'axios'
 export default {
 
   // Gets all users
-  getUsers: () => ( axios.get('/users') ),
+  getCurrentUser: () => ( axios.get('/api/current_user') ),
 
   // Gets all conversations
   getConversations: () => ( axios.get('/conversations') ),

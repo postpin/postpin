@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import "./Discover.css";
 
 class Discover extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     // this.props.setSignedIn();
 
