@@ -5,35 +5,23 @@ const Schema = mongoose.Schema
 const UserSchema = new Schema({
   firstName: {
     type: String,
-    trim: true,
-    required: "First name is required"
+    trim: true
   },
   lastName: {
     type: String,
-    trim: true,
-    required: "First name is required"
+    trim: true
   },
   userName: {
     type: String,
-    trim: true,
-    required: "User name is required"
+    trim: true
   },
   password: {
     type: String,
     trim: true,
-    required: "Password is required",
-    validate: [
-      (input) => {
-        return input.length >= 8;
-      },
-      "Password must have 8 characters or more"
-    ]
   },
   email: {
     type: String,
     trim: true,
-    unique: true,
-    match: [/.+\@.+\..+/, "Please enter a valid e-mail address"]
   },
   profilePhoto: { //image URL
     type: String,

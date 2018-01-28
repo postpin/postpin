@@ -9,7 +9,7 @@ router.route("/")
   .post(userController.create);
 
 // Matches with "/api/comments/:id"
-//Creating the comment and tieing it to post image  
+//Creating the comment and tieing it to post image  - But how to tie it to users 
 router.post("/:id", function (req, res) {
   db.Comment
     .create(req.body)
@@ -23,7 +23,6 @@ router.post("/:id", function (req, res) {
       res.json(err);
     });
 });
-
 
 
 

@@ -2,7 +2,14 @@
   "name": "post-pin",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": {
+    "/auth/google": {
+      "target": "http://localhost:3001"
+    },
+    "/api/*": {
+      "target": "http://localhost:3001"
+    }
+  },
   "dependencies": {
     "autoresponsive-react": "^1.1.30",
     "axios": "^0.17.1",

@@ -7,7 +7,7 @@ class Discover extends Component {
   }
 
   render() {
-    this.props.setSignedIn();
+    // this.props.setSignedIn();
 
     return (
 
