@@ -50,6 +50,7 @@ class App extends Component {
         <div>
           <Nav userInfo={this.state.userInfo} signedIn={this.state.signedIn}/>
           <Switch>
+            <Route exact path="/" component={Discover} />
             <Route exact path="/discover" component={Discover}/>
             <Route exact path="/comments" component={Comments} />
             <Route exact path="/login" component={Login} />
@@ -57,7 +58,6 @@ class App extends Component {
             <Route exact path="/signout" component={Signout} />
             <Route exact path="/signup" component={Signup} />
             <Route component={NoMatch} />
-            />
           </Switch>
         </div>
       </Router>
