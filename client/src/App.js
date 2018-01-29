@@ -15,21 +15,25 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      signedIn: false
+      signedIn: false,
+      userInfo: []
     };
 
-    this.isSignedIn = this.isSignedIn.bind(this);
+    this.getUserInfo = this.getUserInfo.bind(this);
   }
 
   componentDidMount() {
-    this.isSignedIn();
+    this.getUserInfo();
   }
 
-  isSignedIn() {
+  getUserInfo() {
     API.getCurrentUser()
       .then(res => {
         if (res.data) {
-          this.setState({ signedIn: true });
+          this.setState({ 
+            signedIn: true,
+            userInfo: res.data
+           });
         } else {
           this.setState({ signedIn: false });
         }
@@ -43,7 +47,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Nav signedIn={this.state.signedIn}/>
+          <Nav userInfo={this.state.userInfo} signedIn={this.state.signedIn}/>
           <Switch>
             <Route exact path="/discover" component={Discover}/>
             <Route exact path="/metrics" component={Metrics} />

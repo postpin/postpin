@@ -61,7 +61,7 @@ renderContent() {
       return (
         <div>
           <li><Link to="/post">Post</Link></li>
-          <li><UserProfile /></li>
+          <li><UserProfile userInfo={this.props.userInfo}/></li>
           <li><a href="/api/logout">Signout</a></li>
         </div>
       );
