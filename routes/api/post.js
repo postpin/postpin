@@ -6,11 +6,15 @@ router.route("/")
   .get(postController.findAll)
   .post(postController.create);
 
+
+
+
 // Matches with "/api/post/:id"
 router.route("/:id")
   .get(postController.findById)
   .put(postController.update)
   .delete(postController.remove);
+
 
 
 
