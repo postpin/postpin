@@ -7,6 +7,10 @@ const CommentSchema = new Schema({
     type: String,
     required: false
   },
+  likeTotal: {
+    type: Number,
+    required: false
+  },
   commentCreated: {
     type: Date,
     default: Date.now

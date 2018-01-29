@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import "./Discover.css";
 
 class Discover extends Component {
-
   render() {
+    // this.props.setSignedIn();
+
     return (
 
       <div className="discover">

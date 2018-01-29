@@ -38,33 +38,21 @@ const userSeed = [
 const postSeed = [
   {
     title: "test title",
-    body: "King King King King King King",
     cardImage: "tetest.jpg",
-    isAnonymous: true,
     postCreated: new Date(Date.now()),
-    likeTotal: 11,
-    commentTotal: 42,
-    clickTotal: 65
+    commentTotal: 42
   },
   {
     title: "test 2",
-    body: "King King King King King King",
     cardImage: "tetest.jpg",
-    isAnonymous: true,
     postCreated: new Date(Date.now()),
-    likeTotal: 22,
-    commentTotal: 42,
-    clickTotal: 34
+    commentTotal: 42
   },
   {
     title: "test 3",
-    body: "King King King King King King 3",
     cardImage: "tetest.jpg",
-    isAnonymous: true,
     postCreated: new Date(Date.now()),
-    likeTotal: 33,
-    commentTotal: 34,
-    clickTotal: 76
+    commentTotal: 34
   }
 
 ];
@@ -72,22 +60,27 @@ const postSeed = [
 const commentSeed = [
   {
     body: "comment test 1",
+    likeTotal: 11,
     commentCreated: new Date(Date.now()),
   },
   {
     body: "comment test 2",
+    likeTotal: 22,
     commentCreated: new Date(Date.now()),
   },
   {
     body: "comment test 3",
+    likeTotal: 35,
     commentCreated: new Date(Date.now()),
   },
   {
     body: "comment test 4",
+    likeTotal: 39,
     commentCreated: new Date(Date.now()),
   },
   {
     body: "comment test 5",
+    likeTotal: 43,
     commentCreated: new Date(Date.now()),
   }
 ];
