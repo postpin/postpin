@@ -4,6 +4,7 @@ import NoImgs from './NoImgs';
 
 const ImgList = props => {
 	const results = props.data;
+	console.log(props.data)
 	let imgs;
 	if (results.length > 0) {
 		imgs = results.map(img =>

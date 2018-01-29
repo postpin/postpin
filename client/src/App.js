@@ -13,8 +13,8 @@ import Signup from "./pages/Signup";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 
-import ImgList from './components/ImgList';
-import SearchForm from './components/SearchForm';
+// import ImgList from './components/ImgList';
+// import SearchForm from './components/SearchForm';
 
 
 const App = () =>
