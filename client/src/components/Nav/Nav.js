@@ -60,11 +60,13 @@ renderContent() {
     default:
       return (
         <div>
+          <ul>
           <li><Link to="/post">Post</Link></li>
           <li><UserProfile userInfo={this.props.userInfo}/></li>
           <li><a href="/api/logout">Signout</a></li>
+          </ul>
         </div>
-      );
+      )
   }
 }
 
@@ -76,34 +78,22 @@ render() {
   return (
     <div>
       <nav>
-        <div>
+        <div className="container-fluid Navigation" id="navigation">
+        <ul>
           <li><img src={mainLogo} alt="logo" /></li>
           <li><Link className="navbar-brand" to="/">PostPin</Link></li>
           <li><Link to="/"> Discover </Link></li>
-         </div>
+ 
          <div>
            {this.renderContent()}
          </div>
-
-        {/* <div className="container-fluid Navigation" id="navigation">  
-            <li
-              className={window.location.pathname === "/post" ? "active" : ""}>
-              <Link to="/post">Post</Link>
-            </li>
-            <li className={window.location.pathname === "/login" ? "active" : ""}>
-              {this.props.signedIn ? <Link to="/signout">Signout</Link> : <Link to="/login">Login</Link>}
-            </li>
-
-            <li>
-              {this.pros.signedIn && <UserProfile />}
-            </li>
-
-          </ul>
-        </div> */}
-      </nav>; 
+         
+        </ul> 
+        </div>
+      </nav>
     </div > 
-  );
- };
-}
+  )
+ }
+};
 
 export default Nav;

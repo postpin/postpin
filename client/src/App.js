@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
 import Discover from "./pages/Discover";
-import Metrics from "./pages/Metrics";
+import Comments from "./pages/Comments";
 import Login from "./pages/Login";
 import Post from "./pages/Post";
 import Signout from "./pages/Signout";
 import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
+import NoMatch from "./pages/NoMatch";
 import API from './utils/API';
 
 class App extends Component {
@@ -50,12 +51,12 @@ class App extends Component {
           <Nav userInfo={this.state.userInfo} signedIn={this.state.signedIn}/>
           <Switch>
             <Route exact path="/discover" component={Discover}/>
-            <Route exact path="/metrics" component={Metrics} />
+            <Route exact path="/comments" component={Comments} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/post" component={Post} />
             <Route exact path="/signout" component={Signout} />
             <Route exact path="/signup" component={Signup} />
-            {/* <Route component={nomatch}  */}
+            <Route component={NoMatch} />
             />
           </Switch>
         </div>
@@ -72,7 +73,7 @@ class App extends Component {
 //       <Switch>
 //         <Route exact path="/" component={Discover} />
 //         <Route exact path="/discover" component={Discover} />
-//         <Route exact path="/metrics" component={Metrics} />
+//         <Route exact path="/Comments" component={Comments} />
 //         <Route exact path="/login" component={Login} />
 //         <Route exact path="/post" component={Post} />
 //         <Route exact path="/signout" component={Signout} />
