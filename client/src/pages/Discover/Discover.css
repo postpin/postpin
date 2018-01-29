@@ -1,4 +1,20 @@
+.headline{
+  font-size: 50px;
+  color: white;
+  font-style: oblique;
+  font-family: 'Pacifico', cursive;
+}
 
-h1{
-    font-size: 100px;
+.blah{
+  font-size: 15px;
+  font-family: 'Playfair Display', serif;
+  color: white;
+}
+.jumbo-text{
+  padding-left: 300px;
+}
+
+.search-bar{
+  /* text-align: left; */
+  float: left;
 }
