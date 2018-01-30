@@ -7,6 +7,8 @@ const keys = require('./config/keys');
 const passport = require('passport');
 const app = express();
 require('./services/googleStrageryPassport');
+const path = require('path');
+
 
 
 const PORT = process.env.PORT || 3001;
@@ -24,16 +26,12 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Serve up static assets
-app.use(express.static("client/build"));
+// Serve files from the public folder
+app.use(express.static(path.resolve(__dirname, 'build')));
+
 // Add routes, both API and view
 app.use(routes);
 //routes for oauth
-
-
-
-
-
 
 
 
