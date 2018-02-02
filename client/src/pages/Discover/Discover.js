@@ -9,6 +9,7 @@ import ImgList from '../../components/ImgList';
 import SearchForm from '../../components/SearchForm';
 import Jumbotron from "../../components/Jumbotron";
 import InfiniteScroll from 'react-infinite-scroll-component';
+import {Link} from "react-router-dom"
 
 
 class Discover extends React.Component {
@@ -75,7 +76,10 @@ class Discover extends React.Component {
         </Jumbotron>
       	<div>
           {!this.state.loadingState ? <div>Loading ... </div>
-            :<PhotoGrid columns={4} photos={this.state.imgs} />}
+            :<Link to={"/comments"}>
+              <PhotoGrid columns={4} photos={this.state.imgs} />
+              </Link>}
+
 
       	</div>
         </Container>
