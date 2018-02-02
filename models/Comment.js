@@ -11,9 +11,23 @@ const CommentSchema = new Schema({
     type: Number,
     required: false
   },
+
+  userName: {
+    type: String,
+    required: false
+  },
+
   commentCreated: {
     type: Date,
     default: Date.now
+  },
+  _post: {
+    type: Schema.Types.ObjectId,
+    ref: "Post"
+  },
+  _user: {
+    type: Schema.Types.ObjectId,
+    ref: "User"
   }
 
 });

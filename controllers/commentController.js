@@ -2,9 +2,10 @@ const db = require("../models");
 // Defining methods for the booksController
 module.exports = {
   findAll: function(req, res) {
+    console.log(req.query);
     db.Comment
       .find(req.query)
-      .sort({likes: +1})
+      .sort({ likes: +1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

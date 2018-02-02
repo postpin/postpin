@@ -17,7 +17,7 @@ class App extends Component {
     super(props);
     this.state = {
       signedIn: false,
-      userInfo: []
+      userInfo: {}
     };
 
     this.getUserInfo = this.getUserInfo.bind(this);
@@ -52,7 +52,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Discover} />
             <Route exact path="/discover" component={Discover}/>
-            <Route exact path="/comments" component={Comments} />
+            <Route exact path="/comments" component={Comments} userInfo={this.state.userInfo}/>
             <Route exact path="/login" component={Login} />
             <Route exact path="/post" component={Post} />
             <Route exact path="/signout" component={Signout} />
