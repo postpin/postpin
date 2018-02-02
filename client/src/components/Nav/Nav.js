@@ -81,7 +81,7 @@ render() {
         <div className="container-fluid Navigation" id="navigation">
         <ul>
           <li><img src={mainLogo} alt="logo" /></li>
-          <li><Link className="navbar-brand" to="/">PostPin</Link></li>
+          <li><Link className="navbar-brand" to="/">CAPTIONLIZED</Link></li>
           <li><Link to="/"> Discover </Link></li>
  
          <div>

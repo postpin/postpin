@@ -1,23 +1,30 @@
 const router = require("express").Router();
-const userController = require("../../controllers/commentController");
+const commentController = require("../../controllers/commentController");
 const mongoose = require("mongoose");
+const db = require("../../models");
 
 
-// Matches with "/api/comments" and sort 
+
+
+// Matches with "/api/comment" and sort 
 router.route("/")
-  .get(userController.findAll)
-  .post(userController.create);
+  .get(commentController.findAll)
+  .post(commentController.create);
 
-// Matches with "/api/comments/:id"
+  
+// Matches with "/api/comment/:id"
 //Creating the comment and tieing it to post image  - But how to tie it to users 
-router.post("/:id", function (req, res) {
+router.post("/", function (req, res) {
+  console.log('testing req in the post of api/comment: ', req);
+  
   db.Comment
-    .create(req.body)
+    .create(req.body) //req.user.id req.post.id
     .then(function (dbComment) {
-      return db.Post.findOneAndUpdate({ _id: req.params.id }, { comment: dbComment._id }, { new: true });
+      db.Post.findOneAndUpdate({ _id: "5a712b54f095191006ddfb10" }, { $push: { comment: dbComment._id }}, { new: true });
+      db.User.findOneAndUpdate({ _id: "5a700e2e528a9f066b2a5fae" }, { $push: { comment: dbComment._id } }, { new: true });
     })
-    .then(function (dbPost) {
-      res.json(dbPost);
+    .then(function (dbUpate) {
+      res.json(dbUpdate);
     })
     .catch(function (err) {
       res.json(err);
@@ -26,12 +33,12 @@ router.post("/:id", function (req, res) {
 
 
 
-//Adding likes to the comment "/api/comments/likes/:id"
-router.post("/likes/", function (req, res) {
+
+router.post("/like/", function (req, res) {
   db.Comment
     .update(req.body)
     .then(function (dbComment) {
-      return db.Comment.findOneAndUpdate({ _id: req.params.id }, { comment: dbComment._id }, { likeTotal: +1 }, { new: true });
+      return db.Comment.findOneAndUpdate({ _id: req.params.id }, { $inc: { 'comment.likeTotal': 1 } });
     })
     .then(function (dbComment) {
       res.json(dbComment);
@@ -41,6 +48,9 @@ router.post("/likes/", function (req, res) {
     });
 });
 
+
+
+// return db.Comment.findOneAndUpdate({ _id: req.params.id }, { likeTotal: +1 }, { new: true });
 
 
 module.exports = router;

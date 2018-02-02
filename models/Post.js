@@ -7,7 +7,11 @@ const PostSchema = new Schema({
     trim: true,
     required: false
   },
-  cardImage: { //image URL
+  imageID: { //image URL
+    type: String,
+    default: false
+  },
+  image: { //image URL
     type: String,
     default: false
   },

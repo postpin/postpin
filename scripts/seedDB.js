@@ -38,44 +38,50 @@ const userSeed = [
 const postSeed = [
   {
     title: "test title",
-    cardImage: "tetest.jpg",
+    imageID: "jhgjhgj",
+    image: "tetest.jpg",
     postCreated: new Date(Date.now()),
     commentTotal: 42
   },
   {
     title: "test 2",
-    cardImage: "tetest.jpg",
+    imageID: "ghjgjhgj",
+    image: "tetest.jpg",
     postCreated: new Date(Date.now()),
     commentTotal: 42
   },
   {
     title: "test 3",
+    imageID: "hkhkjhk",
     cardImage: "tetest.jpg",
     postCreated: new Date(Date.now()),
     commentTotal: 34
   }
-
 ];
 
 const commentSeed = [
   {
     body: "comment test 1",
     likeTotal: 11,
+    userName: "ABC",
     commentCreated: new Date(Date.now()),
   },
   {
     body: "comment test 2",
     likeTotal: 22,
+    userName: "ABC",
     commentCreated: new Date(Date.now()),
   },
   {
     body: "comment test 3",
     likeTotal: 35,
+    userName: "ABC",
     commentCreated: new Date(Date.now()),
   },
   {
     body: "comment test 4",
     likeTotal: 39,
+    userName: "ABC",
     commentCreated: new Date(Date.now()),
   },
   {
