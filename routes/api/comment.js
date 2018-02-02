@@ -6,13 +6,21 @@ const db = require("../../models");
 
 
 
-// Matches with "/api/comment" and sort 
+// Matches with "/api/comments" and sort 
 router.route("/")
   .get(commentController.findAll)
+  .put(commentController.update)
   .post(commentController.create);
 
+
+router.route("/:id")
+  .get(commentController.findById)
+  .put(commentController.update)
+  .delete(commentController.remove);
+
+
   
-// Matches with "/api/comment/:id"
+// Matches with "/api/comments/:id"
 //Creating the comment and tieing it to post image  - But how to tie it to users 
 router.post("/", function (req, res) {
   console.log('testing req in the post of api/comment: ', req);
