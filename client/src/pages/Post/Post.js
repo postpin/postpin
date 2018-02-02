@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 // import UserProfile from '../../components/UserProfile';
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
-import { Input, FormBtn } from "../../components/Form";
-import "./post.css";
-import "./client/build/js/shards-js"
+// import { Input, FormBtn } from "../../components/Form";
 import SkyLight from "react-skylight";
+import { Input } from 'antd';
+
+const Search = Input.Search;
 
 class Comments extends Component {
   // Setting our component's initial state
@@ -65,6 +66,11 @@ class Comments extends Component {
   //   }
   // };
 
+  // <Input
+  //   name="comment"
+  //   placeholder="your comment here..."
+  // />
+
   render() {
     return (
       <Container fluid>
@@ -79,10 +85,11 @@ class Comments extends Component {
           <Col size="md-6 sm-12">
           <h1> top comments </h1>
             <form>
-              <Input
-                name="comment"
-                placeholder="your comment here..."
-              />
+
+              <div>
+                <Search placeholder="input search text" enterButton="Search" size="large" />
+              </div>
+
               </form>
             </Col>
           </Row>

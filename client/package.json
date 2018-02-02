@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "antd-init": "^2.0.6",
     "autoresponsive-react": "^1.1.30",
     "axios": "^0.17.1",
     "bcryptjs": "^2.4.3",
