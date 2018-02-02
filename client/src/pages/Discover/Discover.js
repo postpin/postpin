@@ -70,7 +70,7 @@ class Discover extends React.Component {
             <div className="headline">Captionized</div>
             <div className="blah">Be inspirational Be creative</div>
             <div className="search-bar"><SearchForm onSearch={this.performSearch} /> </div>
-				<button className="comment"> comment </button>
+			
           </div>
         </Jumbotron>
       	<div>
