@@ -61,7 +61,7 @@ class Discover extends React.Component {
 	performSearch = (query = 'landscape') => {
 		axios
 			.get(
-				`https://api.unsplash.com/search/photos/?page=1&per_page=15&query=${query}&client_id=7c576b9235c5943df0c01ef4561602af3d56d65052d7bff4b207e6aee46b041e`
+				`https://api.unsplash.com/search/photos/?page=1&per_page=28&query=${query}&client_id=7c576b9235c5943df0c01ef4561602af3d56d65052d7bff4b207e6aee46b041e`
 			)
 			.then(response => {
 				// this.setState({ imgs: response.data.results, loadingState: false });
@@ -96,14 +96,16 @@ class Discover extends React.Component {
   //         : <ImgList data={this.state.imgs} />};
   // {!this.state.imgs ? <div>Loading ... </div> : <PhotoGrid columns={4} photos={this.renderContent()} />}
 
+//   <div>
 //   <InfiniteScroll
-// pullDownToRefresh
-// pullDownToRefreshContent={
-// <h3 style={{textAlign: 'center'}}>&#8595; Pull down to refresh</h3>
-// }
-// releaseToRefreshContent={
-// <h3 style={{textAlign: 'center'}}>&#8593; Release to refresh</h3>
-// }
+//   pullDownToRefresh
+//   pullDownToRefreshContent={
+//     <h3 style={{textAlign: 'center'}}>&#8595; Pull down to refresh</h3>
+//   }
+//   releaseToRefreshContent={
+//     <h3 style={{textAlign: 'center'}}>&#8593; Release to refresh</h3>
+//   }
+//
 // refreshFunction={this.refresh}
 // next={fetchData}
 // hasMore={true}
@@ -115,6 +117,7 @@ class Discover extends React.Component {
 // }>
 // {items}
 // </InfiniteScroll>
+// </div>
 
   render() {
     return (
@@ -124,16 +127,15 @@ class Discover extends React.Component {
             <div className="headline">Captionized</div>
             <div className="blah">Be inspirational Be creative</div>
             <div className="search-bar"><SearchForm onSearch={this.performSearch} /> </div>
-<button className="comment"> comment </button>
+
           </div>
         </Jumbotron>
-      	<div>
+        <div>
           {!this.state.loadingState ? <div>Loading ... </div>
-            :<PhotoGrid columns={5} photos={this.state.imgs} />}
+            :<PhotoGrid columns={4} photos={this.state.imgs} />}
 
-      	</div>
+        </div>
         </Container>
-
 
 
     )

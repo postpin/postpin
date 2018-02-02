@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 // import UserProfile from '../../components/UserProfile';
-import API from "../../utils/API";
-import { Col, Row, Container } from "../../components/Grid";
-import { Input, FormBtn } from "../../components/Form";
-import "./post.css";
-import "./client/build/js/shards-js"
-import SkyLight from "react-skylight";
+// import API from "../../utils/API";
 
 class Comments extends Component {
   // Setting our component's initial state
@@ -67,29 +62,10 @@ class Comments extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <div className="Comments">
+        <h1> Comments Page </h1>
 
-        <div className="comment-div">
-        <Row>
-          <Col size="md-6">
-          <h1> picture render here </h1>
-
-          </Col>
-
-          <Col size="md-6 sm-12">
-          <h1> top comments </h1>
-            <form>
-              <Input
-                name="comment"
-                placeholder="your comment here..."
-              />
-              </form>
-            </Col>
-          </Row>
-
-        </div>
-        </Container>
-
+      </div>
     )
   }
 }
