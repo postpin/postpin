@@ -8,6 +8,7 @@ import "./Discover.css";
 import ImgList from '../../components/ImgList';
 import SearchForm from '../../components/SearchForm';
 import Jumbotron from "../../components/Jumbotron";
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 
 
@@ -95,23 +96,45 @@ class Discover extends React.Component {
   //         : <ImgList data={this.state.imgs} />};
   // {!this.state.imgs ? <div>Loading ... </div> : <PhotoGrid columns={4} photos={this.renderContent()} />}
 
+//   <InfiniteScroll
+// pullDownToRefresh
+// pullDownToRefreshContent={
+// <h3 style={{textAlign: 'center'}}>&#8595; Pull down to refresh</h3>
+// }
+// releaseToRefreshContent={
+// <h3 style={{textAlign: 'center'}}>&#8593; Release to refresh</h3>
+// }
+// refreshFunction={this.refresh}
+// next={fetchData}
+// hasMore={true}
+// loader={<h4>Loading...</h4>}
+// endMessage={
+// <p style={{textAlign: 'center'}}>
+//   <b>Yay! You have seen it all</b>
+// </p>
+// }>
+// {items}
+// </InfiniteScroll>
 
   render() {
     return (
       <Container fluid>
         <Jumbotron>
           <div className="jumbo-text">
-            <div className="headline">Caption it</div>
-            <div className="blah">Be inspirational</div>
-            <div className="blah">Be creative</div>
+            <div className="headline">Captionized</div>
+            <div className="blah">Be inspirational Be creative</div>
             <div className="search-bar"><SearchForm onSearch={this.performSearch} /> </div>
+<button className="comment"> comment </button>
           </div>
         </Jumbotron>
       	<div>
-        {!this.state.imgs ? <div>Loading ... </div> :<PhotoGrid columns={5} photos={this.state.imgs} />}
+          {!this.state.loadingState ? <div>Loading ... </div>
+            :<PhotoGrid columns={5} photos={this.state.imgs} />}
 
       	</div>
         </Container>
+
+
 
     )
   }

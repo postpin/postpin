@@ -12,6 +12,7 @@
     "react": "^16.2.0",
     "react-chartjs-2": "^2.7.0",
     "react-dom": "^16.2.0",
+    "react-infinite-scroll-component": "^3.0.2",
     "react-photo-feed": "^1.0.13",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.0",
