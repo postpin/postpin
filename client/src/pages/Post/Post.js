@@ -32,10 +32,6 @@ class Post extends Component {
     });
   };
 
-
-
-
-
   handleFormSubmit = event => {
     event.preventDefault();
   

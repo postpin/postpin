@@ -6,7 +6,7 @@ import Discover from "./pages/Discover";
 import Comments from "./pages/Comments";
 import Login from "./pages/Login";
 import Post from "./pages/Post";
-import Signout from "./pages/Signout";
+import Gallery from "./pages/Gallery";
 import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
 import NoMatch from "./pages/NoMatch";
@@ -53,11 +53,11 @@ class App extends Component {
           {/* <Route exact component={NoMatch} /> */}
           <Route exact path="/" component={Discover} />
           <Route exact path="/discover" component={Discover}/>
+          <Route exact path="/gallery" component={Gallery} />
           {/* <Route exact path="/comments" component={Comments} userInfo={this.state.userInfo}/> */}
           <Route exact path="/login" component={Login} />
           <Route exact path="/posts/:id/comments" component={Post} />
           {/* <Route path="/posts" component={Post} /> */}
-          <Route exact path="/signout" component={Signout} />
           <Route exact path="/signup" component={Signup} />
           {/* </Switch> */}
         </div>
