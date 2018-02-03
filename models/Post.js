@@ -7,7 +7,7 @@ const PostSchema = new Schema({
     trim: true,
     required: false
   },
-  imageID: { //image URL
+  imageID: { //image id from unsplash
     type: String,
     default: false
   },

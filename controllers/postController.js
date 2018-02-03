@@ -9,11 +9,22 @@ module.exports = {
   },
   findById: function(req, res) {
     db.Post
-      .findById(req.params.id)
+      .findOne({imageID: req.params.id})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
+
+    //
+    // console.log("this is req in postController for create: ", req.body.imageID);
+    //
+    // const existingPost = db.Post.findOne({ imageID: req.body.imageID });
+    //
+    // if (existingPost) {
+    //
+    // }
+
+
     db.Post
       .create(req.body)
       .then(dbModel => res.json(dbModel))

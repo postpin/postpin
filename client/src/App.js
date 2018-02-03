@@ -31,7 +31,7 @@ class App extends Component {
     API.getCurrentUser()
       .then(res => {
         if (res.data) {
-          this.setState({ 
+          this.setState({
             signedIn: true,
             userInfo: res.data
            });
@@ -49,16 +49,17 @@ class App extends Component {
       <Router>
         <div>
           <Nav userInfo={this.state.userInfo} signedIn={this.state.signedIn}/>
-          <Switch>
-            <Route exact path="/" component={Discover} />
-            <Route exact path="/discover" component={Discover}/>
-            <Route exact path="/comments" component={Comments} userInfo={this.state.userInfo}/>
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/post" component={Post} />
-            <Route exact path="/signout" component={Signout} />
-            <Route exact path="/signup" component={Signup} />
-            <Route component={NoMatch} />
-          </Switch>
+          {/* <Switch> */}
+          {/* <Route exact component={NoMatch} /> */}
+          <Route exact path="/" component={Discover} />
+          <Route exact path="/discover" component={Discover}/>
+          <Route exact path="/comments" component={Comments} userInfo={this.state.userInfo}/>
+          <Route exact path="/login" component={Login} />
+          <Route path="/posts/:id/comments" component={Comments} />
+          <Route path="/posts" component={Post} />
+          <Route exact path="/signout" component={Signout} />
+          <Route exact path="/signup" component={Signup} />
+          {/* </Switch> */}
         </div>
       </Router>
     );
@@ -68,7 +69,7 @@ class App extends Component {
 // const App = () =>
 //   <Router>
 //     <div>
-      
+
 //       <Nav />
 //       <Switch>
 //         <Route exact path="/" component={Discover} />

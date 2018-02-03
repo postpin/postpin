@@ -9,7 +9,7 @@ router.route("/")
   .post(postController.create);
 
 
-// Matches with "/api/post/:id"
+// Matches with "/api/posts/:id"
 router.route("/:id")
   .get(postController.findById)
   .put(postController.update)
@@ -17,8 +17,6 @@ router.route("/:id")
 
 // this route is "/api/post/:id/comments"
 router.post("/:id/comments", function (req, res) {
-  console.log('testing req in the post: ', req.params);
-  console.log('req.user: ', req.user)
 
   newComment = new db.Comment(req.body)
   // newComment._post = req.params.id;

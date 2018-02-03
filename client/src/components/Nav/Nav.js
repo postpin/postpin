@@ -48,7 +48,7 @@ renderContent() {
     case null:
       return (
         <div>
-          Loading ... 
+          Loading ...
         </div>
         )
     case false:
@@ -73,8 +73,6 @@ renderContent() {
 
 
 render() {
-  console.log('this.props of nav: ', this.props.signedIn);
-  
   return (
     <div>
       <nav>
@@ -83,15 +81,15 @@ render() {
           <li><img src={mainLogo} alt="logo" /></li>
           <li><Link className="navbar-brand" to="/">CAPTIONLIZED</Link></li>
           <li><Link to="/"> Discover </Link></li>
- 
+
          <div>
            {this.renderContent()}
          </div>
-         
-        </ul> 
+
+        </ul>
         </div>
       </nav>
-    </div > 
+    </div >
   )
  }
 };
