@@ -73,11 +73,11 @@ class Discover extends React.Component {
         </div>
       </Jumbotron>
       <div>
-        The content should load here
+
 
         {!this.state.imgs? <div>Loading...</div>: this.state.imgs.map(img => {
           return (
-            <div key={img.id}>
+            <div className="imageGridItem"key={img.id}>
               <div onClick={() => {this.onImageClick(img)}}>
                 <img src={img.urls.thumb} />
               </div>
