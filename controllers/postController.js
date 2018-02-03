@@ -8,6 +8,8 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
+    console.log(req.params);
+    
     db.Post
       .findOne({imageID: req.params.id})
       .then(dbModel => res.json(dbModel))

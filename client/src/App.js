@@ -53,10 +53,10 @@ class App extends Component {
           {/* <Route exact component={NoMatch} /> */}
           <Route exact path="/" component={Discover} />
           <Route exact path="/discover" component={Discover}/>
-          <Route exact path="/comments" component={Comments} userInfo={this.state.userInfo}/>
+          {/* <Route exact path="/comments" component={Comments} userInfo={this.state.userInfo}/> */}
           <Route exact path="/login" component={Login} />
-          <Route path="/posts/:id/comments" component={Comments} />
-          <Route path="/posts" component={Post} />
+          <Route exact path="/posts/:id/comments" component={Post} />
+          {/* <Route path="/posts" component={Post} /> */}
           <Route exact path="/signout" component={Signout} />
           <Route exact path="/signup" component={Signup} />
           {/* </Switch> */}
