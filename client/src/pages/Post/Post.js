@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Comment from '../Comments/Comments';
 import API from "../../utils/API";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-// import Columns from 'react-columns';
+
+import Columns from 'react-columns';
 import styles from './Post.css'
 
 
