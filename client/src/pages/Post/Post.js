@@ -4,9 +4,7 @@ import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 // import { Input, FormBtn } from "../../components/Form";
 import SkyLight from "react-skylight";
-import { Input } from 'antd';
-
-const Search = Input.Search;
+import { Input, Button} from 'antd';
 
 class Comments extends Component {
   // Setting our component's initial state
@@ -80,14 +78,16 @@ class Comments extends Component {
           <Col size="md-6">
           <h1> picture render here </h1>
 
+
           </Col>
 
           <Col size="md-6 sm-12">
           <h1> top comments </h1>
+          <h1> render all comments here</h1>
             <form>
 
               <div>
-                <Search placeholder="input search text" enterButton="Search" size="large" />
+                <Input placeholder="Your comments here..." /> <Button type="primary">submit</Button>
               </div>
 
               </form>
