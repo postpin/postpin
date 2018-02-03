@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Comment from '../Comments/Comments';
 import API from "../../utils/API";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import Columns from 'react-columns';
+import styles from './Post.css'
+
 
 class Post extends Component {
   constructor(props) {
@@ -30,14 +33,14 @@ class Post extends Component {
     return (
       <div className="post">
         <h1> Post Page </h1>
-        <div className="container">
-          <div className="col-xs-6">
+        
+          <div className="imgDiv">
             {!this.state.img ? <div>Loading ... </div> : <img src={this.state.img.image} />}
           </div>
-          <div className="col-xs-6">
+          <div className="commentDiv">
             <Comment />
           </div>
-          <div className="form">
+          <div className="forms">
             <form>
               <TextArea
                 value={this.state.comment}
@@ -55,7 +58,7 @@ class Post extends Component {
           
           </div>
 
-        </div>
+        
       </div>
     )
   }
