@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
 // import UserProfile from '../../components/UserProfile';
 import API from "../../utils/API";
+import { Col, Row, Container } from "../../components/Grid";
+import { List, ListItem } from '../../components/List'
+// import { Input, FormBtn } from "../../components/Form";
+import SkyLight from "react-skylight";
+import { Input, Button } from 'antd';
+import Discover from "../Discover";
+
 class Comments extends Component {
   // Setting our component's initial state
-  state = {
-    comments: [],
-    body: "",
-    likeTotal: "",
-    userName: "", //ask how to past props down
-    _post: ""
-  };
 
+  constructor() {
+    super();
+    this.state = {
+      comments: [],
+      body: "",
+      likeTotal: "",
+      _post: "",
+      image: "",
+      loadingState: true
+    };
+  };
   // When the component mounts, load all Comments and save them to this.state.Comments
   componentDidMount() {
     this.loadPost();
@@ -41,7 +52,7 @@ class Comments extends Component {
   saveComment = () => {
     API.createComment()
       .then(res =>
-        this.setState({ comments: res.data, body: "", _post:"", userName: this.props.userInfo.firstName }) //???
+        this.setState({ comments: res.data, body: "", _post: "", userName: this.props.userInfo.firstName }) //???
       )
       .catch(err => console.log(err));
   };
@@ -59,12 +70,46 @@ class Comments extends Component {
   //   }
   // };
 
-  render() {
-    return (
-      <div className="Comments">
-        <h1> Comments Page </h1>
+  // <Input
+  //   name="comment"
+  //   placeholder="your comment here..."
+  // />
 
-      </div>
+  render() {
+    const { comments, image} = this.state
+
+    return (
+
+
+      <Container fluid>
+        <Row>
+          <Col size='md-5 sm-12'>
+
+            <h2 style={{ paddingTop: 25, paddingLeft: 25 }}>
+              Comments
+            </h2>
+
+            {comments.length ? (
+              <List>
+                {comments.map(comment => (
+                  <ListItem
+                    key={comment.id}
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => this.setState({ selectedcomment: comment })}
+                  >
+                    <div>
+                      {comment.body}
+                    </div>
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+                <h3 className='alert alert-warning'>No Comments</h3>
+              )}
+          </Col>
+
+        </Row>
+      </Container>
     )
   }
 }

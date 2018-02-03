@@ -1,39 +1,3 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import "./Navbar.css";
-
-// const Nav = () => (
-//   <nav className="navbar navbar-inverse sticky-top">
-//     <div className="container-fluid Navigation" id="navigation">
-
-//         <Link to="/discover" className="navbar-brand">
-//           Discover
-//         </Link>
-//       <div className="navbar-header">
-
-//         <Link to="/post" className="navbar-brand">
-//           Post
-//         </Link>
-//         <Link to="/login" className="navbar-brand">
-//           Login
-//         </Link>
-//         <Link to="/Metrics" className="navbar-brand">
-//           Metrics
-//         </Link>
-//         <Link to="/signup" className="navbar-brand">
-//           Sign Up
-//         </Link>
-
-
-//       </div>
-//     </div>
-//   </nav>
-// );
-
-// export default Nav;
-
-
-
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";

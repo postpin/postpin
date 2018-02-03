@@ -11,13 +11,15 @@ import Jumbotron from "../../components/Jumbotron";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import {Link} from "react-router-dom"
 import API from '../../utils/API';
+import Post  from "../Post/Post";
 
 class Discover extends React.Component {
   constructor() {
     super();
     this.state = {
       imgs: [],
-      loadingState: true
+      loadingState: true,
+      hideComponent: false
     };
   }
 

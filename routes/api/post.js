@@ -17,18 +17,19 @@ router.route("/:id")
 
 // this route is "/api/post/:id/comments"
 router.post("/:id/comments", function (req, res) {
-
-  newComment = new db.Comment(req.body)
+  console.log(req.body);
+  
+  // newComment = new db.Comment(req.body)
   // newComment._post = req.params.id;
   // newComment.body = req.body.body
   // newComment.userName = req.body.userName
 
-  newComment.save((err, comment) => {
-    if (err) {
-      res.send(err);
-    }
-    res.json(comment);
-  });
+  // newComment.save((err, comment) => {
+  //   if (err) {
+  //     res.send(err);
+  //   }
+  //   res.json(comment);
+  // });
 });
 
 
