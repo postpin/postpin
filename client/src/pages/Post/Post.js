@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 // import UserProfile from '../../components/UserProfile';
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
+import { List } from "../../components/List";
+
 // import { Input, FormBtn } from "../../components/Form";
 import SkyLight from "react-skylight";
-import { Input, Button} from 'antd';
+import { Button } from 'antd';
+import { Input } from 'antd';
+
+const { TextArea } = Input;
+
 
 class Comments extends Component {
   // Setting our component's initial state
@@ -69,6 +75,7 @@ class Comments extends Component {
   //   placeholder="your comment here..."
   // />
 
+
   render() {
     return (
       <Container fluid>
@@ -82,16 +89,20 @@ class Comments extends Component {
           </Col>
 
           <Col size="md-6 sm-12">
-          <h1> top comments </h1>
-          <h1> render all comments here</h1>
-            <form>
 
-              <div>
-                <Input placeholder="Your comments here..." /> <Button type="primary">submit</Button>
-              </div>
 
-              </form>
+          <div className="comment-div">
+            <div className="load-comment">
+              <h1> render all comments here</h1>
+            </div>
+            <div>
+              <list>
+              <Input placeholder="Your comments here..." /> <Button type="primary">submit</Button>
+            </list>
+            </div>
+          </div>
             </Col>
+
           </Row>
 
         </div>
