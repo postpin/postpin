@@ -24,6 +24,33 @@ class Post extends Component {
       .catch(err => console.error(err));
   }
 
+
+  handleInputChange = event => {
+    const { comment, value } = event.target;
+    this.setState({
+      [comment]: value
+    });
+  };
+
+
+
+
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+  
+    API.createComment()
+      .then(res =>
+        this.setState({ comments: res.data, body: ""}) //???
+      )
+      .catch(err => console.log(err));
+
+  };
+
+
+
+
+
   render() {
     console.log(this.state.img);
     
