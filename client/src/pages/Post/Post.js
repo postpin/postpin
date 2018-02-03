@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Comment from '../Comments/Comments';
 import API from "../../utils/API";
+import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class Post extends Component {
   constructor(props) {
@@ -36,6 +37,24 @@ class Post extends Component {
           <div className="col-xs-6">
             <Comment />
           </div>
+          <div className="form">
+            <form>
+              <TextArea
+                value={this.state.comment}
+                onChange={this.handleInputChange}
+                name="comment"
+                placeholder="comment (Optional)"
+              />
+              <FormBtn
+                disabled={!(this.state.author && this.state.title)}
+                onClick={this.handleFormSubmit}
+              >
+                Submit Comment
+              </FormBtn>
+            </form>
+          
+          </div>
+
         </div>
       </div>
     )
