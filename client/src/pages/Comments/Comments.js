@@ -4,9 +4,9 @@ import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from '../../components/List'
 // import { Input, FormBtn } from "../../components/Form";
-import SkyLight from "react-skylight";
-import { Input, Button } from 'antd';
-import Discover from "../Discover";
+// import SkyLight from "react-skylight";
+// import { Input, Button } from 'antd';
+// import Discover from "../Discover";
 
 class Comments extends Component {
   // Setting our component's initial state

@@ -16,7 +16,7 @@ router.get('/auth/google',
 router.get('/auth/google/callback',
     passport.authenticate('google'),
     (req, res) => {
-        res.redirect('/loggedinstate');
+        res.redirect('/discover');
 
     }
 );

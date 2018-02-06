@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "server": "node server.js",
-    "start": "node server.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
     "client": "node scripts/start-client.js",
     "dev": "concurrently \"nodemon server.js\" \"npm run client\"",
     "build": "node scripts/build.js",
