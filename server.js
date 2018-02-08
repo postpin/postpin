@@ -27,7 +27,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Serve files from the public folder
-app.use(express.static(path.resolve(__dirname, 'build')));
+app.use(express.static(path.resolve(__dirname, 'client/build')));
 
 // Add routes, both API and view
 app.use(routes);
